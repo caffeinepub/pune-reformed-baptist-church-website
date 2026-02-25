@@ -1,0 +1,286 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-mobile-optimized-minimalist-elegant-timeless-website-ui-for-pune-reformed-baptist-church-using-a-calm-reverent-palette-deep-blue-charcoal-warm-gray-off-white-with-strong-long-form-typography-and-a-distraction-free-layout-avoid-flashy-animations-and-entertainment-performance-style-visuals",
+      "featureTitle": "Create a mobile-optimized, minimalist, elegant, timeless website UI for Pune Reformed Baptist Church using a calm, reverent palette (deep blue, charcoal, warm gray, off-white) with strong long-form typography and a distraction-free layout; avoid flashy animations and entertainment/performance-style visuals.",
+      "files": [
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-required-page-structure-and-navigation-with-the-following-routes-pages-home-about-us-our-confession-1689-london-baptist-confession-of-faith-what-we-believe-worship-with-us-sermons-discipleship-resources-and-contact-visit-us",
+      "featureTitle": "Implement the required page structure and navigation with the following routes/pages: Home, About Us, Our Confession (1689 London Baptist Confession of Faith), What We Believe, Worship With Us, Sermons, Discipleship, Resources, and Contact & Visit Us.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/nav/SiteHeader.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BeliefsPage.tsx",
+        "frontend/src/pages/ConfessionPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DiscipleshipPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ResourcesPage.tsx",
+        "frontend/src/pages/SermonDetailPage.tsx",
+        "frontend/src/pages/SermonsPage.tsx",
+        "frontend/src/pages/WorshipPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-write-all-user-facing-copy-in-english-with-a-christ-centered-scripture-saturated-warm-but-reverent-confessional-tone-that-emphasizes-the-authority-of-scripture-ordinary-means-of-grace-and-doctrinal-clarity-avoid-entertainment-driven-seeker-marketing-language-buzzwords-casual-slang-and-any-political-cultural-social-commentary",
+      "featureTitle": "Write all user-facing copy in English with a Christ-centered, Scripture-saturated, warm-but-reverent, confessional tone that emphasizes the authority of Scripture, ordinary means of grace, and doctrinal clarity; avoid entertainment-driven/seeker-marketing language, buzzwords, casual slang, and any political/cultural/social commentary.",
+      "files": [
+        "frontend/src/content/scripture.ts",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BeliefsPage.tsx",
+        "frontend/src/pages/ConfessionPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DiscipleshipPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ResourcesPage.tsx",
+        "frontend/src/pages/WorshipPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-home-page-with-a-christ-centered-welcome-an-integrated-scripture-verse-esv-or-nkjv-only-clear-lord-s-day-service-information-time-s-and-basic-location-placeholder-text-and-a-prominent-call-to-action-button-link-reading-exactly-join-us-this-lord-s-day",
+      "featureTitle": "Build the Home page with: a Christ-centered welcome, an integrated Scripture verse (ESV or NKJV only), clear Lord’s Day service information (time(s) and basic location placeholder text), and a prominent call-to-action button/link reading exactly: “Join Us This Lord’s Day”.",
+      "files": [
+        "frontend/src/components/cta/PrimaryCTA.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-about-us-page-content-covering-church-identity-as-a-confessional-reformed-baptist-congregation-aligned-with-the-1689-london-baptist-confession-of-faith-a-brief-church-history-use-neutral-placeholder-dates-if-needed-and-a-leadership-section-use-respectful-placeholder-names-titles-if-actual-names-are-not-provided",
+      "featureTitle": "Create the About Us page content covering: church identity as a confessional Reformed Baptist congregation aligned with the 1689 London Baptist Confession of Faith, a brief church history (use neutral placeholder dates if needed), and a leadership section (use respectful placeholder names/titles if actual names are not provided).",
+      "files": [
+        "frontend/src/components/sections/Section.tsx",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-our-confession-page-presenting-the-1689-london-baptist-confession-of-faith-clearly-and-readably-with-an-introduction-explaining-its-role-as-a-subordinate-standard-under-scripture-include-a-structured-layout-suitable-for-long-form-reading",
+      "featureTitle": "Create the Our Confession page presenting the 1689 London Baptist Confession of Faith clearly and readably, with an introduction explaining its role as a subordinate standard under Scripture; include a structured layout suitable for long-form reading.",
+      "files": [
+        "frontend/src/content/confession1689.ts",
+        "frontend/src/pages/ConfessionPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-what-we-believe-page-explaining-in-clear-pastoral-doctrinally-precise-terms-the-gospel-the-doctrines-of-grace-covenant-theology-as-articulated-in-the-1689-lbcf-the-regulative-principle-of-worship-believer-s-baptism-and-the-lord-s-supper-integrate-relevant-esv-nkjv-scripture-quotations-naturally-throughout",
+      "featureTitle": "Create the What We Believe page explaining (in clear, pastoral, doctrinally precise terms) the Gospel, the Doctrines of Grace, Covenant Theology as articulated in the 1689 LBCF, the Regulative Principle of Worship, believer’s baptism, and the Lord’s Supper; integrate relevant ESV/NKJV Scripture quotations naturally throughout.",
+      "files": [
+        "frontend/src/components/scripture/ScriptureQuote.tsx",
+        "frontend/src/pages/BeliefsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-worship-with-us-page-describing-the-lord-s-day-gathering-a-simple-liturgy-outline-consistent-with-reverent-reformed-worship-e-g-call-to-worship-prayer-scripture-reading-psalm-hymn-singing-preaching-sacraments-as-applicable-and-a-clear-what-to-expect-section-for-visitors-including-attire-family-children-expectations-and-service-length-as-neutral-placeholders-if-needed",
+      "featureTitle": "Create the Worship With Us page describing the Lord’s Day gathering, a simple liturgy outline consistent with reverent Reformed worship (e.g., call to worship, prayer, Scripture reading, psalm/hymn singing, preaching, sacraments as applicable), and a clear “what to expect” section for visitors (including attire, family/children expectations, and service length as neutral placeholders if needed).",
+      "files": [
+        "frontend/src/components/sections/LiturgyList.tsx",
+        "frontend/src/pages/WorshipPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-sermons-archive-page-that-lists-expository-sermons-with-at-least-title-scripture-text-preacher-name-placeholder-if-needed-date-and-an-optional-audio-link-field-include-sermon-detail-pages-or-an-expandable-detail-view-for-reading-sermon-metadata-without-clutter",
+      "featureTitle": "Implement a Sermons archive page that lists expository sermons with at least: title, Scripture text, preacher name (placeholder if needed), date, and an optional audio link field; include sermon detail pages or an expandable detail view for reading sermon metadata without clutter.",
+      "files": [
+        "frontend/src/components/sermons/SermonListItem.tsx",
+        "frontend/src/pages/SermonDetailPage.tsx",
+        "frontend/src/pages/SermonsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-discipleship-page-covering-membership-meaningful-membership-elder-led-congregationalism-catechism-usage-and-family-worship-encouragement-integrate-esv-nkjv-scripture-quotations-naturally-and-keep-the-tone-pastoral-and-invitational",
+      "featureTitle": "Create the Discipleship page covering membership (meaningful membership, elder-led congregationalism), catechism usage, and family worship encouragement; integrate ESV/NKJV Scripture quotations naturally and keep the tone pastoral and invitational.",
+      "files": [
+        "frontend/src/pages/DiscipleshipPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-resources-page-with-curated-sections-for-confessions-catechisms-and-recommended-reading-include-short-reverent-annotations-and-where-relevant-outbound-links-use-safe-placeholders-if-actual-urls-are-not-provided",
+      "featureTitle": "Create the Resources page with curated sections for confessions, catechisms, and recommended reading; include short, reverent annotations and (where relevant) outbound links (use safe placeholders if actual URLs are not provided).",
+      "files": [
+        "frontend/src/components/resources/ResourceList.tsx",
+        "frontend/src/pages/ResourcesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-contact-visit-us-page-including-location-section-use-clear-placeholder-address-for-pune-until-real-address-is-provided-service-timings-and-a-contact-form-name-email-message-that-submits-to-the-backend-and-provides-a-clear-success-error-state-without-using-external-email-sms-providers",
+      "featureTitle": "Create the Contact & Visit Us page including location section (use clear placeholder address for Pune until real address is provided), service timings, and a contact form (name, email, message) that submits to the backend and provides a clear success/error state without using external email/SMS providers.",
+      "files": [
+        "frontend/src/components/forms/ContactForm.tsx",
+        "frontend/src/components/forms/FormFeedback.tsx",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-use-a-small-set-of-reverent-non-performative-static-imagery-focused-on-bible-preaching-congregational-worship-psalm-singing-prayer-and-the-lord-s-table-and-integrate-them-into-page-headers-sections-without-distracting-from-reading-store-generated-images-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend",
+      "featureTitle": "Generate and use a small set of reverent, non-performative static imagery (focused on Bible preaching, congregational worship, psalm singing, prayer, and the Lord’s Table) and integrate them into page headers/sections without distracting from reading; store generated images under frontend/public/assets/generated and reference them directly from the frontend.",
+      "files": [
+        "frontend/src/components/media/PageHeaderImage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/WorshipPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

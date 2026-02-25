@@ -1,0 +1,436 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Pune Reformed Baptist Church (1689) — Reading-first church website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Establish a mobile-first, minimalist, reading-optimized design system (palette + typography + layout) with restrained motion.",
+      "acceptanceCriteria": [
+        "Site-wide typography is optimized for reading (comfortable line-height/measure) and consistent across pages.",
+        "Color palette matches the specified tones (deep blue/charcoal/warm gray/off-white) and is applied consistently via a shared design system.",
+        "No autoplay video, parallax, or attention-grabbing animations are present.",
+        "All pages are responsive and readable on mobile widths (no horizontal scrolling; navigation usable on small screens)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create/define global base styles and CSS variables for the reverent palette (deep blue, charcoal, warm gray, off-white), reading-first typography (measure, line-height), and restrained defaults (no animation-heavy globals)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme tokens (via CSS variables already referenced) and typography plugin defaults to support long-form reading and the specified palette; keep motion utilities available but do not introduce flashy animations."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout component that enforces distraction-free content width, consistent headings, and mobile-first spacing across all pages."
+        },
+        {
+          "path": "frontend/src/components/typography/Prose.tsx",
+          "operation": "create",
+          "description": "Create a small wrapper component for long-form reading sections using Tailwind typography classes and consistent vertical rhythm."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement required routes/pages and a responsive top-level navigation that works on desktop and mobile with active-route indication.",
+      "acceptanceCriteria": [
+        "Top-level navigation provides access to all required pages on desktop and mobile.",
+        "Each route renders the correct page content and page title/heading.",
+        "Navigation highlights the active route (or otherwise clearly indicates current page)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app router and route table for: Home, About Us, Our Confession, What We Believe, Worship With Us, Sermons, Discipleship, Resources, Contact & Visit Us; ensure document titles/headings align with routes."
+        },
+        {
+          "path": "frontend/src/components/nav/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with desktop navigation and mobile menu, including active-route indication. Use shadcn-ui navigation primitives (e.g., NavigationMenu/Sheet/Button) to support accessible navigation; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/nav/NavLinkItem.tsx",
+          "operation": "create",
+          "description": "Create a small navigation link wrapper that styles active vs inactive states consistently (desktop + mobile)."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create the About Us page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/ConfessionPage.tsx",
+          "operation": "create",
+          "description": "Create the Our Confession (1689 LBCF) page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/BeliefsPage.tsx",
+          "operation": "create",
+          "description": "Create the What We Believe page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/WorshipPage.tsx",
+          "operation": "create",
+          "description": "Create the Worship With Us page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/SermonsPage.tsx",
+          "operation": "create",
+          "description": "Create the Sermons archive page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/SermonDetailPage.tsx",
+          "operation": "create",
+          "description": "Create a sermon detail page route component (e.g., by id) and wire into the router to support uncluttered metadata reading."
+        },
+        {
+          "path": "frontend/src/pages/DiscipleshipPage.tsx",
+          "operation": "create",
+          "description": "Create the Discipleship page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "create",
+          "description": "Create the Resources page route component and wire into the router."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact & Visit Us page route component and wire into the router."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Ensure all user-facing copy is English, Christ-centered, Scripture-saturated, reverent/confessional in tone, and uses only ESV/NKJV quotations with attribution.",
+      "acceptanceCriteria": [
+        "All page copy follows the specified tone (reverent, doctrinally precise, pastoral) and avoids seeker-marketing phrasing.",
+        "No political, cultural, or social commentary is included in the content.",
+        "Any Scripture quotations included are explicitly labeled/attributed as ESV or NKJV and no other translation is quoted."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/scripture.ts",
+          "operation": "create",
+          "description": "Centralize Scripture quotations used across pages and ensure each quotation is explicitly attributed (ESV or NKJV only)."
+        },
+        {
+          "path": "frontend/src/content/siteCopy.ts",
+          "operation": "create",
+          "description": "Centralize key site copy blocks (welcome text, visit instructions, page intros) to keep tone consistent and avoid political/cultural/social commentary."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update Home page copy to match the specified confessional, pastoral tone and ensure any Scripture quotation is labeled ESV or NKJV."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Update About page copy to match tone constraints and avoid marketing language and commentary."
+        },
+        {
+          "path": "frontend/src/pages/ConfessionPage.tsx",
+          "operation": "modify",
+          "description": "Update Confession page introduction copy to clearly express Scripture’s supreme authority and keep a reverent tone."
+        },
+        {
+          "path": "frontend/src/pages/BeliefsPage.tsx",
+          "operation": "modify",
+          "description": "Update Beliefs page copy to be doctrinally precise and add section-by-section ESV/NKJV-labeled quotations."
+        },
+        {
+          "path": "frontend/src/pages/WorshipPage.tsx",
+          "operation": "modify",
+          "description": "Update Worship page copy to avoid entertainment/performance framing and keep visitor guidance warm-but-reverent."
+        },
+        {
+          "path": "frontend/src/pages/DiscipleshipPage.tsx",
+          "operation": "modify",
+          "description": "Update Discipleship page copy to be pastoral/invitational and ensure Scripture quotations are labeled ESV or NKJV."
+        },
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "modify",
+          "description": "Update Resources annotations to maintain the reverent tone and avoid any political/cultural/social commentary."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Update Contact page copy (instructions and form helper text) to remain reverent, clear, and free of marketing language."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build the Home page with a Christ-centered welcome, an attributed ESV/NKJV verse, Lord’s Day service info, and a prominent CTA labeled exactly “Join Us This Lord’s Day”.",
+      "acceptanceCriteria": [
+        "Home page displays a welcome section, a Scripture quotation labeled ESV or NKJV, and service information.",
+        "CTA text matches exactly “Join Us This Lord’s Day” and is visually prominent above the fold on mobile and desktop.",
+        "CTA navigates to an appropriate page section (e.g., Worship With Us or Contact & Visit Us) that provides next-step visit details."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Implement Home content sections: Christ-centered welcome, a single ESV/NKJV-attributed Scripture quotation, clear Lord’s Day times and location placeholder, and a prominent CTA button/link with text exactly “Join Us This Lord’s Day” linking to Worship or Contact/Visit."
+        },
+        {
+          "path": "frontend/src/components/cta/PrimaryCTA.tsx",
+          "operation": "create",
+          "description": "Create a consistent primary CTA component for the site. Use shadcn-ui Button to provide accessible styling; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Add an anchorable ‘visit next steps’ section so the Home CTA can land on concrete visit details (service times, location placeholder)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create the About Us page content: identity (1689-aligned), brief history (placeholder dates ok), and leadership (reverent placeholder names/titles).",
+      "acceptanceCriteria": [
+        "About Us page includes distinct sections for identity, history, and leadership.",
+        "Identity explicitly references alignment with the 1689 London Baptist Confession of Faith.",
+        "Leadership section uses reverent, appropriate titles (e.g., Elders) and does not introduce celebrity-style language."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Add distinct Identity, History, and Leadership sections; explicitly reference alignment with the 1689 London Baptist Confession of Faith; use respectful placeholder elder names/titles."
+        },
+        {
+          "path": "frontend/src/components/sections/Section.tsx",
+          "operation": "create",
+          "description": "Create a reusable Section component to keep headings/spacing consistent and suitable for reading-first layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create the Our Confession page with an introduction (Scripture supreme; confession subordinate) and a structured long-form reading layout for the 1689 LBCF.",
+      "acceptanceCriteria": [
+        "Page contains an introduction affirming Scripture’s supreme authority and the confession’s subordinate role.",
+        "Confession content is presented in a long-form-friendly layout (clear headings/sections).",
+        "No content suggests the confession replaces or supersedes Scripture."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ConfessionPage.tsx",
+          "operation": "modify",
+          "description": "Implement an introductory section on Scripture’s supreme authority and the confession as a subordinate standard; render the confession in a structured, long-form-friendly layout with clear headings and sections."
+        },
+        {
+          "path": "frontend/src/content/confession1689.ts",
+          "operation": "create",
+          "description": "Add a structured representation of the 1689 confession content (chapters/sections) suitable for long-form display and easy future replacement with the full text."
+        },
+        {
+          "path": "frontend/src/components/typography/LongformDocument.tsx",
+          "operation": "create",
+          "description": "Create a long-form document renderer component (headings, section spacing, optional table-of-contents links) optimized for reading."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create the What We Believe page with distinct doctrinal sections and ESV/NKJV-attributed Scripture quotations throughout.",
+      "acceptanceCriteria": [
+        "Page includes distinct sections for Gospel, Doctrines of Grace, Covenant Theology (1689), Worship (Regulative Principle), Baptism, and the Lord’s Supper.",
+        "At least one Scripture quotation per major section is included and labeled ESV or NKJV.",
+        "Language is confessional and precise; avoids marketing jargon and casual slang."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BeliefsPage.tsx",
+          "operation": "modify",
+          "description": "Implement required sections (Gospel; Doctrines of Grace; Covenant Theology per 1689; Regulative Principle; Believer’s Baptism; Lord’s Supper) and embed at least one labeled ESV/NKJV quotation per section."
+        },
+        {
+          "path": "frontend/src/components/scripture/ScriptureQuote.tsx",
+          "operation": "create",
+          "description": "Create a Scripture quote component that enforces visible translation attribution (ESV/NKJV) and consistent styling within long-form reading pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create the Worship With Us page describing Lord’s Day gathering, a simple reverent liturgy outline, and a practical what-to-expect section without entertainment framing.",
+      "acceptanceCriteria": [
+        "Page includes sections for Lord’s Day gathering, liturgy outline, and what-to-expect.",
+        "Content explicitly avoids entertainment/performance framing of worship.",
+        "Visitor guidance is practical, warm, and reverent (no casual slang)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/WorshipPage.tsx",
+          "operation": "modify",
+          "description": "Add sections for Lord’s Day gathering, a simple liturgy outline (call to worship, prayer, Scripture reading, psalm/hymn singing, preaching, sacraments as applicable), and a what-to-expect section (attire, family/children, service length placeholders) with reverent tone."
+        },
+        {
+          "path": "frontend/src/components/sections/LiturgyList.tsx",
+          "operation": "create",
+          "description": "Create a clean, minimal list component for the liturgy outline to keep the page readable and uncluttered."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Implement a Sermons archive listing sermons loaded from the backend, plus a detail view (page) for full metadata without clutter.",
+      "acceptanceCriteria": [
+        "Sermons archive displays a list of sermons with title, passage, preacher, and date.",
+        "Users can open a sermon to view full metadata (detail page or expandable view).",
+        "Sermons data is loaded from the backend canister (not hardcoded only in the UI)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/sermons/useSermons.ts",
+          "operation": "create",
+          "description": "Create React Query hooks that load sermons from the backend actor (list and get-by-id) via the existing actor wiring."
+        },
+        {
+          "path": "frontend/src/pages/SermonsPage.tsx",
+          "operation": "modify",
+          "description": "Render a sermons archive list showing title, Scripture reference, preacher, date, and optional audio link; ensure data is fetched via React Query hooks (not hardcoded only)."
+        },
+        {
+          "path": "frontend/src/pages/SermonDetailPage.tsx",
+          "operation": "modify",
+          "description": "Render a sermon detail view with full metadata in a reading-friendly layout; include an optional audio link when present."
+        },
+        {
+          "path": "frontend/src/components/sermons/SermonListItem.tsx",
+          "operation": "create",
+          "description": "Create a list-row/card component for sermon summaries. Use shadcn-ui Card/Button as appropriate for accessible interaction; Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Create the Discipleship page content covering membership, catechism, and family worship with ESV/NKJV quotations and pastoral tone.",
+      "acceptanceCriteria": [
+        "Page includes sections for membership, catechism, and family worship.",
+        "Mentions elder-led congregationalism in a clear, non-polemical manner.",
+        "All Scripture quotations are labeled ESV or NKJV."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/DiscipleshipPage.tsx",
+          "operation": "modify",
+          "description": "Implement distinct sections for meaningful membership (including elder-led congregationalism), catechism use, and family worship encouragement; add labeled ESV/NKJV quotations where used."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Create a Resources page with curated confessions, catechisms, and recommended reading, each with reverent annotations and safe outbound links.",
+      "acceptanceCriteria": [
+        "Resources are grouped into the three required categories.",
+        "Each resource includes a title and a brief description in the requested tone.",
+        "Outbound links (if used) are clearly marked and open safely (no inline tracking/political content)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "modify",
+          "description": "Implement three sections (Confessions, Catechisms, Recommended Reading) with brief reverent annotations and safe outbound links (placeholder URLs allowed)."
+        },
+        {
+          "path": "frontend/src/components/resources/ResourceList.tsx",
+          "operation": "create",
+          "description": "Create a simple list component for resources that supports titles, short descriptions, and safe external links (e.g., using rel protections)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Create Contact & Visit Us page with location/service timings and a contact form (name/email/message) that submits to the backend with validation and clear success/error states.",
+      "acceptanceCriteria": [
+        "Contact page includes location info and service timings.",
+        "Contact form validates required fields and shows submission feedback (loading/success/error).",
+        "Submitted messages are stored via the backend canister and can be retrieved via a backend query (for verification/testing)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/contact/useSubmitContactForm.ts",
+          "operation": "create",
+          "description": "Create a React Query mutation hook that submits contact form data to the backend actor and exposes loading/success/error states."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Implement location section (Pune placeholder address), service timings, and a validated contact form (name, email, message) with clear loading/success/error UI and no external email/SMS providers."
+        },
+        {
+          "path": "frontend/src/components/forms/ContactForm.tsx",
+          "operation": "create",
+          "description": "Create a reusable contact form component with required-field validation and clear submission feedback. Use shadcn-ui Form/Input/Textarea/Button components if available to ensure accessible inputs; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/forms/FormFeedback.tsx",
+          "operation": "create",
+          "description": "Create a small component for consistent success/error messaging (including a non-intrusive success confirmation state). Use shadcn-ui Alert components if available; Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Add and integrate a small set of reverent static images (generated assets) into headers/sections, prioritizing readability and restrained presentation.",
+      "acceptanceCriteria": [
+        "Generated images are present under frontend/public/assets/generated and are used in at least the Home and Worship With Us pages.",
+        "Images are displayed with restrained sizing/cropping and do not degrade readability on mobile.",
+        "No performance-stage/worship-concert visual motifs are used (e.g., spotlights, fog, stage theatrics)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-bible-pulpit.dim_1920x900.png",
+          "operation": "create",
+          "description": "Add generated static image asset for Home hero usage: frontend/public/assets/generated/hero-bible-pulpit.dim_1920x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-congregation-reverent.dim_1920x900.png",
+          "operation": "create",
+          "description": "Add generated static image asset for subdued congregational header usage: frontend/public/assets/generated/hero-congregation-reverent.dim_1920x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/prayer-hands.dim_1200x1200.png",
+          "operation": "create",
+          "description": "Add generated static image asset for small section use: frontend/public/assets/generated/prayer-hands.dim_1200x1200.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/lords-table-elements.dim_1920x900.png",
+          "operation": "create",
+          "description": "Add generated static image asset for Worship/Supper section header usage: frontend/public/assets/generated/lords-table-elements.dim_1920x900.png."
+        },
+        {
+          "path": "frontend/src/components/media/PageHeaderImage.tsx",
+          "operation": "create",
+          "description": "Create a restrained page header image component that supports readable overlays/spacing without dominating the page (mobile-first)."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Integrate frontend/public/assets/generated/hero-bible-pulpit.dim_1920x900.png into the Home header/hero area with restrained sizing so it does not distract from reading."
+        },
+        {
+          "path": "frontend/src/pages/WorshipPage.tsx",
+          "operation": "modify",
+          "description": "Integrate frontend/public/assets/generated/lords-table-elements.dim_1920x900.png and/or frontend/public/assets/generated/hero-congregation-reverent.dim_1920x900.png into Worship With Us sections with restrained presentation for mobile readability."
+        }
+      ]
+    }
+  ]
+}

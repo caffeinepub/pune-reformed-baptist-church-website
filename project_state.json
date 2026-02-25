@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Design and generate a modern, clean, reverent, reading-first church website for Pune Reformed Baptist Church (1689 London Baptist Confession-aligned), with doctrinally precise, Scripture-saturated content and required pages/sections, optimized for mobile and avoiding entertainment/seeker-marketing style.",
+  "architectural_notes": [
+    "Scripture quotations/content must use ESV or NKJV only.",
+    "Site tone/content must be Christ-centered, Scripture-saturated, and confessional; avoid entertainment-driven or seeker-marketing language and avoid political/cultural/social commentary.",
+    "Design system: minimalist, elegant, timeless; calm reverent palette (deep blue, charcoal, warm gray, off-white); strong long-form typography; reading-first layout; mobile-first; no flashy animations.",
+    "Imagery direction: Bible preaching, congregational worship, psalm singing, prayer, Lord’s Table (avoid performance-style worship visuals)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wide hero photograph of an open Bible on a pulpit with soft natural light (hero-bible-pulpit.dim_1920x900.png)\n- Wide photograph of a reverent congregational gathering seen from the back with subdued tones (hero-congregation-reverent.dim_1920x900.png)\n- Square close-up photograph of hands folded in prayer with warm, subdued lighting (prayer-hands.dim_1200x1200.png)\n- Wide photograph of the Lord’s Table elements arranged simply and reverently (lords-table-elements.dim_1920x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-mobile-optimized-minimalist-elegant-timeless-website-ui-for-pune-reformed-baptist-church-using-a-calm-reverent-palette-deep-blue-charcoal-warm-gray-off-white-with-strong-long-form-typography-and-a-distraction-free-layout-avoid-flashy-animations-and-entertainment-performance-style-visuals",
+      "title": "Create a mobile-optimized, minimalist, elegant, timeless website UI for Pune Reformed Baptist Church using a calm, reverent palette (deep blue, charcoal, warm gray, off-white) with strong long-form typography and a distraction-free layout; avoid flashy animations and entertainment/performance-style visuals.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-required-page-structure-and-navigation-with-the-following-routes-pages-home-about-us-our-confession-1689-london-baptist-confession-of-faith-what-we-believe-worship-with-us-sermons-discipleship-resources-and-contact-visit-us",
+      "title": "Implement the required page structure and navigation with the following routes/pages: Home, About Us, Our Confession (1689 London Baptist Confession of Faith), What We Believe, Worship With Us, Sermons, Discipleship, Resources, and Contact & Visit Us.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-write-all-user-facing-copy-in-english-with-a-christ-centered-scripture-saturated-warm-but-reverent-confessional-tone-that-emphasizes-the-authority-of-scripture-ordinary-means-of-grace-and-doctrinal-clarity-avoid-entertainment-driven-seeker-marketing-language-buzzwords-casual-slang-and-any-political-cultural-social-commentary",
+      "title": "Write all user-facing copy in English with a Christ-centered, Scripture-saturated, warm-but-reverent, confessional tone that emphasizes the authority of Scripture, ordinary means of grace, and doctrinal clarity; avoid entertainment-driven/seeker-marketing language, buzzwords, casual slang, and any political/cultural/social commentary.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-a-christ-centered-welcome-an-integrated-scripture-verse-esv-or-nkjv-only-clear-lord-s-day-service-information-time-s-and-basic-location-placeholder-text-and-a-prominent-call-to-action-button-link-reading-exactly-join-us-this-lord-s-day",
+      "title": "Build the Home page with: a Christ-centered welcome, an integrated Scripture verse (ESV or NKJV only), clear Lord’s Day service information (time(s) and basic location placeholder text), and a prominent call-to-action button/link reading exactly: “Join Us This Lord’s Day”.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-us-page-content-covering-church-identity-as-a-confessional-reformed-baptist-congregation-aligned-with-the-1689-london-baptist-confession-of-faith-a-brief-church-history-use-neutral-placeholder-dates-if-needed-and-a-leadership-section-use-respectful-placeholder-names-titles-if-actual-names-are-not-provided",
+      "title": "Create the About Us page content covering: church identity as a confessional Reformed Baptist congregation aligned with the 1689 London Baptist Confession of Faith, a brief church history (use neutral placeholder dates if needed), and a leadership section (use respectful placeholder names/titles if actual names are not provided).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-our-confession-page-presenting-the-1689-london-baptist-confession-of-faith-clearly-and-readably-with-an-introduction-explaining-its-role-as-a-subordinate-standard-under-scripture-include-a-structured-layout-suitable-for-long-form-reading",
+      "title": "Create the Our Confession page presenting the 1689 London Baptist Confession of Faith clearly and readably, with an introduction explaining its role as a subordinate standard under Scripture; include a structured layout suitable for long-form reading.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-what-we-believe-page-explaining-in-clear-pastoral-doctrinally-precise-terms-the-gospel-the-doctrines-of-grace-covenant-theology-as-articulated-in-the-1689-lbcf-the-regulative-principle-of-worship-believer-s-baptism-and-the-lord-s-supper-integrate-relevant-esv-nkjv-scripture-quotations-naturally-throughout",
+      "title": "Create the What We Believe page explaining (in clear, pastoral, doctrinally precise terms) the Gospel, the Doctrines of Grace, Covenant Theology as articulated in the 1689 LBCF, the Regulative Principle of Worship, believer’s baptism, and the Lord’s Supper; integrate relevant ESV/NKJV Scripture quotations naturally throughout.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-worship-with-us-page-describing-the-lord-s-day-gathering-a-simple-liturgy-outline-consistent-with-reverent-reformed-worship-e-g-call-to-worship-prayer-scripture-reading-psalm-hymn-singing-preaching-sacraments-as-applicable-and-a-clear-what-to-expect-section-for-visitors-including-attire-family-children-expectations-and-service-length-as-neutral-placeholders-if-needed",
+      "title": "Create the Worship With Us page describing the Lord’s Day gathering, a simple liturgy outline consistent with reverent Reformed worship (e.g., call to worship, prayer, Scripture reading, psalm/hymn singing, preaching, sacraments as applicable), and a clear “what to expect” section for visitors (including attire, family/children expectations, and service length as neutral placeholders if needed).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sermons-archive-page-that-lists-expository-sermons-with-at-least-title-scripture-text-preacher-name-placeholder-if-needed-date-and-an-optional-audio-link-field-include-sermon-detail-pages-or-an-expandable-detail-view-for-reading-sermon-metadata-without-clutter",
+      "title": "Implement a Sermons archive page that lists expository sermons with at least: title, Scripture text, preacher name (placeholder if needed), date, and an optional audio link field; include sermon detail pages or an expandable detail view for reading sermon metadata without clutter.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-discipleship-page-covering-membership-meaningful-membership-elder-led-congregationalism-catechism-usage-and-family-worship-encouragement-integrate-esv-nkjv-scripture-quotations-naturally-and-keep-the-tone-pastoral-and-invitational",
+      "title": "Create the Discipleship page covering membership (meaningful membership, elder-led congregationalism), catechism usage, and family worship encouragement; integrate ESV/NKJV Scripture quotations naturally and keep the tone pastoral and invitational.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-resources-page-with-curated-sections-for-confessions-catechisms-and-recommended-reading-include-short-reverent-annotations-and-where-relevant-outbound-links-use-safe-placeholders-if-actual-urls-are-not-provided",
+      "title": "Create the Resources page with curated sections for confessions, catechisms, and recommended reading; include short, reverent annotations and (where relevant) outbound links (use safe placeholders if actual URLs are not provided).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-visit-us-page-including-location-section-use-clear-placeholder-address-for-pune-until-real-address-is-provided-service-timings-and-a-contact-form-name-email-message-that-submits-to-the-backend-and-provides-a-clear-success-error-state-without-using-external-email-sms-providers",
+      "title": "Create the Contact & Visit Us page including location section (use clear placeholder address for Pune until real address is provided), service timings, and a contact form (name, email, message) that submits to the backend and provides a clear success/error state without using external email/SMS providers.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-use-a-small-set-of-reverent-non-performative-static-imagery-focused-on-bible-preaching-congregational-worship-psalm-singing-prayer-and-the-lord-s-table-and-integrate-them-into-page-headers-sections-without-distracting-from-reading-store-generated-images-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend",
+      "title": "Generate and use a small set of reverent, non-performative static imagery (focused on Bible preaching, congregational worship, psalm singing, prayer, and the Lord’s Table) and integrate them into page headers/sections without distracting from reading; store generated images under frontend/public/assets/generated and reference them directly from the frontend.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create full church website for Pune Reformed Baptist Church with required pages (Home, About Us, Our Confession, What We Believe, Worship With Us, Sermons, Discipleship, Resources, Contact & Visit Us) and prominent CTA “Join Us This Lord’s Day”.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement content rules and tone: Christ-centered, pastoral, confessional; avoid buzzwords/seeker-marketing, politics/culture commentary; integrate Scripture quotations using ESV or NKJV only.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Apply minimalist, elegant, timeless design system: calm reverent palette (deep blue/charcoal/warm gray/off-white), readable long-form typography, distraction-free layout, fully mobile-optimized, no flashy animations/performance visuals.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Sermons section as an expository preaching archive.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add Contact & Visit Us page including location/timings and a contact form.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add backend data models and API methods for managing and retrieving sermon entries (list and get-by-id at minimum), suitable for an expository preaching archive; provide initial seed data so the Sermons page renders meaningful content on first load.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Pune Reformed Baptist Church Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

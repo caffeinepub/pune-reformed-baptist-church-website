@@ -1,0 +1,96 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T22:36:49.540Z",
+  "summary": "Diff adds a new Motoko backend with authorization/user-profile models plus sermon/contact data structures, and a new React/TanStack Router frontend with navigation, typography/theme styling, sermon list item UI, scripture quote component, and a contact form. Several BuildRequest requirements are only partially evidenced in the diff summary; a few implemented features appear unrequested and/or conflict with constraints.",
+  "missing_requirements": [
+    {
+      "id": "REQ-10",
+      "requirement": "Provide initial seed data so the Sermons page renders meaningful content on first load (at least 3 seed sermon entries after deployment).",
+      "reason": "Only one seed sermon is shown being added, and it is placed in `postupgrade`, which would not run on a fresh install; the diff summary does not show at least 3 deterministic seed sermons available after initial deployment.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Generated images are present under `frontend/public/assets/generated` and used in at least the Home and Worship With Us pages.",
+      "reason": "No generated image files or references to `frontend/public/assets/generated` are shown in the diff summary; therefore this requirement is not evidenced as implemented.",
+      "evidence": [
+        "frontend/src/components/media/PageHeaderImage.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication integration (AuthClient/provider hook) and identity-based actor creation.",
+      "reason": "BuildRequest explicitly constrains \"No third-party authentication providers\"; adding Internet Identity auth is not requested and appears to violate the constraint.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Admin-token/secret initialization via URL parameter (`caffeineAdminToken`) for access control initialization.",
+      "reason": "Not requested in any requirement; also introduces a hidden secret mechanism via URL parameters.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "User profile data model and APIs (get/save user profile) with role-based authorization.",
+      "reason": "Not requested; BuildRequest non-goals exclude a full admin CMS, and no requirements mention user accounts/profiles.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Footer includes an outbound link with UTM tracking parameters to caffeine.ai.",
+      "reason": "Not requested; acceptance criteria for Resources mentions safe outbound links and no inline tracking. While this is in the footer (not Resources), it still introduces tracking-style parameters and promotional content that is outside the requested church-site scope.",
+      "evidence": [
+        "frontend/src/components/layout/SiteFooter.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/cta/PrimaryCTA.tsx",
+    "frontend/src/components/forms/ContactForm.tsx",
+    "frontend/src/components/forms/FormFeedback.tsx",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/components/media/PageHeaderImage.tsx",
+    "frontend/src/components/nav/SiteHeader.tsx",
+    "frontend/src/components/resources/ResourceList.tsx",
+    "frontend/src/components/scripture/ScriptureQuote.tsx",
+    "frontend/src/components/sections/LiturgyList.tsx",
+    "frontend/src/components/sections/Section.tsx",
+    "frontend/src/components/sermons/SermonListItem.tsx",
+    "frontend/src/content/confession1689.ts",
+    "frontend/src/content/scripture.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/BeliefsPage.tsx",
+    "frontend/src/pages/ConfessionPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/DiscipleshipPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/ResourcesPage.tsx",
+    "frontend/src/pages/SermonDetailPage.tsx",
+    "frontend/src/pages/SermonsPage.tsx",
+    "frontend/src/pages/WorshipPage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

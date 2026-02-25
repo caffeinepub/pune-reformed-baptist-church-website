@@ -1,0 +1,303 @@
+{
+  "kind": "build_request",
+  "title": "Build a reverent, reading-first church website for Pune Reformed Baptist Church (1689 LBCF)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a mobile-optimized, minimalist, elegant, timeless website UI for Pune Reformed Baptist Church using a calm, reverent palette (deep blue, charcoal, warm gray, off-white) with strong long-form typography and a distraction-free layout; avoid flashy animations and entertainment/performance-style visuals.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Design Direction: Minimalist, elegant, and timeless (not trendy) ... Calm, reverent color palette (deep blue, charcoal, warm gray, off-white) ... Strong, readable typography optimized for long-form reading ... Reading-first, distraction-free layout ... Fully optimized for mobile devices ... No flashy animations or performance-style worship visuals"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site-wide typography is optimized for reading (comfortable line-height/measure) and consistent across pages.",
+        "Color palette matches the specified tones (deep blue/charcoal/warm gray/off-white) and is applied consistently via a shared design system.",
+        "No autoplay video, parallax, or attention-grabbing animations are present.",
+        "All pages are responsive and readable on mobile widths (no horizontal scrolling; navigation usable on small screens)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the required page structure and navigation with the following routes/pages: Home, About Us, Our Confession (1689 London Baptist Confession of Faith), What We Believe, Worship With Us, Sermons, Discipleship, Resources, and Contact & Visit Us.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Required Pages & Sections: Home ... About Us ... Our Confession ... What We Believe ... Worship With Us ... Sermons ... Discipleship ... Resources ... Contact & Visit Us"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Top-level navigation provides access to all required pages on desktop and mobile.",
+        "Each route renders the correct page content and page title/heading.",
+        "Navigation highlights the active route (or otherwise clearly indicates current page)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Write all user-facing copy in English with a Christ-centered, Scripture-saturated, warm-but-reverent, confessional tone that emphasizes the authority of Scripture, ordinary means of grace, and doctrinal clarity; avoid entertainment-driven/seeker-marketing language, buzzwords, casual slang, and any political/cultural/social commentary.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The website should reflect theological depth, pastoral warmth, and doctrinal clarity—avoiding entertainment-driven or seeker-marketing language.",
+          "Use Scripture quotations only from ESV or NKJV",
+          "Avoid political, cultural, or social commentary",
+          "Content Style Guidelines: Clear, pastoral, and doctrinally precise language ... Avoid buzzwords, trends, and casual slang"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All page copy follows the specified tone (reverent, doctrinally precise, pastoral) and avoids seeker-marketing phrasing.",
+        "No political, cultural, or social commentary is included in the content.",
+        "Any Scripture quotations included are explicitly labeled/attributed as ESV or NKJV and no other translation is quoted."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build the Home page with: a Christ-centered welcome, an integrated Scripture verse (ESV or NKJV only), clear Lord’s Day service information (time(s) and basic location placeholder text), and a prominent call-to-action button/link reading exactly: “Join Us This Lord’s Day”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Home (Christ-centered welcome, Scripture verse, service info)",
+          "Prominently include the call-to-action: “Join Us This Lord’s Day”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page displays a welcome section, a Scripture quotation labeled ESV or NKJV, and service information.",
+        "CTA text matches exactly “Join Us This Lord’s Day” and is visually prominent above the fold on mobile and desktop.",
+        "CTA navigates to an appropriate page section (e.g., Worship With Us or Contact & Visit Us) that provides next-step visit details."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create the About Us page content covering: church identity as a confessional Reformed Baptist congregation aligned with the 1689 London Baptist Confession of Faith, a brief church history (use neutral placeholder dates if needed), and a leadership section (use respectful placeholder names/titles if actual names are not provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "About Us (Church identity, history, leadership)",
+          "Pune Reformed Baptist Church ... aligned with the 1689 London Baptist Confession of Faith"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About Us page includes distinct sections for identity, history, and leadership.",
+        "Identity explicitly references alignment with the 1689 London Baptist Confession of Faith.",
+        "Leadership section uses reverent, appropriate titles (e.g., Elders) and does not introduce celebrity-style language."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create the Our Confession page presenting the 1689 London Baptist Confession of Faith clearly and readably, with an introduction explaining its role as a subordinate standard under Scripture; include a structured layout suitable for long-form reading.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Our Confession (1689 London Baptist Confession)",
+          "Authority and sufficiency of Scripture"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page contains an introduction affirming Scripture’s supreme authority and the confession’s subordinate role.",
+        "Confession content is presented in a long-form-friendly layout (clear headings/sections).",
+        "No content suggests the confession replaces or supersedes Scripture."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create the What We Believe page explaining (in clear, pastoral, doctrinally precise terms) the Gospel, the Doctrines of Grace, Covenant Theology as articulated in the 1689 LBCF, the Regulative Principle of Worship, believer’s baptism, and the Lord’s Supper; integrate relevant ESV/NKJV Scripture quotations naturally throughout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "What We Believe (Gospel, Doctrines of Grace, Sacraments, Worship)",
+          "Theological Framework: Authority and sufficiency of Scripture ... Doctrines of Grace ... Covenant Theology as articulated in the 1689 LBC ... Regulative Principle of Worship ... Believer’s baptism and the Lord’s Supper"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page includes distinct sections for Gospel, Doctrines of Grace, Covenant Theology (1689), Worship (Regulative Principle), Baptism, and the Lord’s Supper.",
+        "At least one Scripture quotation per major section is included and labeled ESV or NKJV.",
+        "Language is confessional and precise; avoids marketing jargon and casual slang."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create the Worship With Us page describing the Lord’s Day gathering, a simple liturgy outline consistent with reverent Reformed worship (e.g., call to worship, prayer, Scripture reading, psalm/hymn singing, preaching, sacraments as applicable), and a clear “what to expect” section for visitors (including attire, family/children expectations, and service length as neutral placeholders if needed).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Worship With Us (Lord’s Day gathering, liturgy, what to expect)",
+          "Regulative Principle of Worship",
+          "Imagery focused on ... congregational worship, psalm singing, prayer, and the Lord’s Table"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page includes sections for Lord’s Day gathering, liturgy outline, and what-to-expect.",
+        "Content explicitly avoids entertainment/performance framing of worship.",
+        "Visitor guidance is practical, warm, and reverent (no casual slang)."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement a Sermons archive page that lists expository sermons with at least: title, Scripture text, preacher name (placeholder if needed), date, and an optional audio link field; include sermon detail pages or an expandable detail view for reading sermon metadata without clutter.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Sermons (Expository preaching archive)",
+          "Expository preaching"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sermons archive displays a list of sermons with title, passage, preacher, and date.",
+        "Users can open a sermon to view full metadata (detail page or expandable view).",
+        "Sermons data is loaded from the backend canister (not hardcoded only in the UI)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add backend data models and API methods for managing and retrieving sermon entries (list and get-by-id at minimum), suitable for an expository preaching archive; provide initial seed data so the Sermons page renders meaningful content on first load.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Sermons (Expository preaching archive)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes query methods to list sermons and fetch a sermon by id.",
+        "Backend returns stable, deterministic data suitable for React Query consumption.",
+        "At least 3 seed sermon entries are available after deployment so the UI is not empty."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create the Discipleship page covering membership (meaningful membership, elder-led congregationalism), catechism usage, and family worship encouragement; integrate ESV/NKJV Scripture quotations naturally and keep the tone pastoral and invitational.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Discipleship (Membership, catechism, family worship)",
+          "Meaningful church membership and elder-led congregationalism"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page includes sections for membership, catechism, and family worship.",
+        "Mentions elder-led congregationalism in a clear, non-polemical manner.",
+        "All Scripture quotations are labeled ESV or NKJV."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create the Resources page with curated sections for confessions, catechisms, and recommended reading; include short, reverent annotations and (where relevant) outbound links (use safe placeholders if actual URLs are not provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Resources (Confessions, catechisms, recommended reading)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Resources are grouped into the three required categories.",
+        "Each resource includes a title and a brief description in the requested tone.",
+        "Outbound links (if used) are clearly marked and open safely (no inline tracking/political content)."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create the Contact & Visit Us page including location section (use clear placeholder address for Pune until real address is provided), service timings, and a contact form (name, email, message) that submits to the backend and provides a clear success/error state without using external email/SMS providers.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact & Visit Us (Location, timings, contact form)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page includes location info and service timings.",
+        "Contact form validates required fields and shows submission feedback (loading/success/error).",
+        "Submitted messages are stored via the backend canister and can be retrieved via a backend query (for verification/testing)."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Generate and use a small set of reverent, non-performative static imagery (focused on Bible preaching, congregational worship, psalm singing, prayer, and the Lord’s Table) and integrate them into page headers/sections without distracting from reading; store generated images under frontend/public/assets/generated and reference them directly from the frontend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Imagery focused on Bible preaching, congregational worship, psalm singing, prayer, and the Lord’s Table"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are present under frontend/public/assets/generated and are used in at least the Home and Worship With Us pages.",
+        "Images are displayed with restrained sizing/cropping and do not degrade readability on mobile.",
+        "No performance-stage/worship-concert visual motifs are used (e.g., spotlights, fog, stage theatrics)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use Scripture quotations only from ESV or NKJV.",
+    "Avoid political, cultural, or social commentary in all user-facing content.",
+    "Frontend files under the platform’s immutable paths must not be edited; compose new components/pages around them.",
+    "Backend must remain a single Motoko actor; only add migration code if persistent state upgrades require it.",
+    "No third-party authentication providers; no external email/SMS services."
+  ],
+  "nonGoals": [
+    "Implementing a full admin CMS for editing pages/sermons from the browser.",
+    "Integrating livestreaming, real-time chat, or social media feeds.",
+    "Using trendy/flashy animations, performance-style worship visuals, or seeker-marketing copy.",
+    "Adding non-English translations or multi-language switching."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wide hero photograph of an open Bible on a pulpit with soft natural light (hero-bible-pulpit.dim_1920x900.png)",
+      "Wide photograph of a reverent congregational gathering seen from the back with subdued tones (hero-congregation-reverent.dim_1920x900.png)",
+      "Square close-up photograph of hands folded in prayer with warm, subdued lighting (prayer-hands.dim_1200x1200.png)",
+      "Wide photograph of the Lord’s Table elements arranged simply and reverently (lords-table-elements.dim_1920x900.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
